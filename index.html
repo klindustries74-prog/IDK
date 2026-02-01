@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secret Imposter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- SETUP -->
+  <div id="setup" class="card">
+    <h1>🕵️ Secret Imposter</h1>
+
+    <label>
+      Secret Word
+      <input type="text" id="secretWord" placeholder="Enter word">
+    </label>
+
+    <label>
+      Number of Players
+      <input type="number" id="playerCount" min="2" value="4">
+    </label>
+
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- PASS PHONE -->
+  <div id="pass" class="card hidden">
+    <h2>🚫 PASS THE PHONE</h2>
+    <p>Only <strong>Player <span id="passPlayer"></span></strong> should look</p>
+    <button onclick="ready()">I’m Ready</button>
+  </div>
+
+  <!-- REVEAL -->
+  <div id="reveal" class="card hidden">
+    <h2 id="playerTitle"></h2>
+
+    <div id="role" class="role"></div>
+
+    <button onclick="hideRole()">Hide & Pass Phone</button>
+  </div>
+
+  <!-- END -->
+  <div id="end" class="card hidden">
+    <h2>🎉 All Roles Assigned</h2>
+    <p>Let the game begin…</p>
+    <button onclick="resetGame()">Reset Game</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
